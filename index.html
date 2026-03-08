@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>ABC Portfolio BI</title>
+    <link rel="manifest" href="public/manifest.webmanifest" />
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section id="unlock-screen" class="screen active">
+        <div class="card auth-card">
+          <h1>ABC Portfolio BI</h1>
+          <p class="muted">Cofre local-first com dados cifrados no browser.</p>
+          <label>Password mestra
+            <input id="master-password" type="password" placeholder="Introduza a password" />
+          </label>
+          <button id="unlock-btn">Desbloquear</button>
+          <p id="auth-hint" class="hint"></p>
+        </div>
+      </section>
+
+      <section id="main-screen" class="screen">
+        <header class="topbar">
+          <h1>Portfólio Familiar</h1>
+          <div>
+            <button id="lock-btn" class="ghost">Lock</button>
+          </div>
+        </header>
+
+        <nav class="tabs">
+          <button data-tab="dashboard" class="tab active">Dashboard</button>
+          <button data-tab="owners" class="tab">Owners</button>
+          <button data-tab="accounts" class="tab">Accounts</button>
+          <button data-tab="assets" class="tab">Assets</button>
+          <button data-tab="transactions" class="tab">Movimentos</button>
+        </nav>
+
+        <main>
+          <section id="tab-dashboard" class="panel active"></section>
+          <section id="tab-owners" class="panel"></section>
+          <section id="tab-accounts" class="panel"></section>
+          <section id="tab-assets" class="panel"></section>
+          <section id="tab-transactions" class="panel"></section>
+        </main>
+      </section>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
